@@ -1,0 +1,33 @@
+<%- model_class = Worker -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:worker_surname) %>:</strong></dt>
+  <dd><%= @worker.worker_surname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worker_name) %>:</strong></dt>
+  <dd><%= @worker.worker_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worker_patronymic) %>:</strong></dt>
+  <dd><%= @worker.worker_patronymic %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worker_birth_date) %>:</strong></dt>
+  <dd><%= @worker.worker_birth_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worker_employment_date) %>:</strong></dt>
+  <dd><%= @worker.worker_employment_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worker_position) %>:</strong></dt>
+  <dd><%= @worker.worker_position %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worker_education) %>:</strong></dt>
+  <dd><%= @worker.worker_education %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:library_id) %>:</strong></dt>
+  <dd><%= @worker.library_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              workers_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_worker_path(@worker), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              worker_path(@worker),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

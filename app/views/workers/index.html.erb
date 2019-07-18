@@ -1,0 +1,52 @@
+<%- model_class = Worker -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:worker_surname) %></th>
+      <th><%= model_class.human_attribute_name(:worker_name) %></th>
+      <th><%= model_class.human_attribute_name(:worker_patronymic) %></th>
+      <th><%= model_class.human_attribute_name(:worker_birth_date) %></th>
+      <th><%= model_class.human_attribute_name(:worker_employment_date) %></th>
+      <th><%= model_class.human_attribute_name(:worker_position) %></th>
+      <th><%= model_class.human_attribute_name(:worker_education) %></th>
+      <th><%= model_class.human_attribute_name(:library_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @workers.each do |worker| %>
+      <tr>
+        <td><%= link_to worker.id, worker_path(worker) %></td>
+        <td><%= worker.worker_surname %></td>
+        <td><%= worker.worker_name %></td>
+        <td><%= worker.worker_patronymic %></td>
+        <td><%= worker.worker_birth_date %></td>
+        <td><%= worker.worker_employment_date %></td>
+        <td><%= worker.worker_position %></td>
+        <td><%= worker.worker_education %></td>
+        <td><%= worker.library_id %></td>
+        <td><%=l worker.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      worker_path(worker), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_worker_path(worker), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      worker_path(worker),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_worker_path,
+            :class => 'btn btn-primary' %>

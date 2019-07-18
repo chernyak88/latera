@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  worker_surname: MyString
+  worker_name: MyString
+  worker_patronymic: MyString
+  worker_birth_date: 2019-07-18
+  worker_employment_date: 2019-07-18
+  worker_position: MyString
+  worker_education: MyString
+  library_id: 1
+
+two:
+  worker_surname: MyString
+  worker_name: MyString
+  worker_patronymic: MyString
+  worker_birth_date: 2019-07-18
+  worker_employment_date: 2019-07-18
+  worker_position: MyString
+  worker_education: MyString
+  library_id: 1
