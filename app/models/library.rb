@@ -1,2 +1,5 @@
-class Library < ApplicationRecord
+class Library < ActiveRecord::Base
+
+  has_many :subscribers
+
 end
