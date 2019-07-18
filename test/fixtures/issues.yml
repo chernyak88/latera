@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_issue: 2019-07-18
+  date_of_return: 2019-07-18
+  book_id: 1
+  subscriber_id: 1
+
+two:
+  date_of_issue: 2019-07-18
+  date_of_return: 2019-07-18
+  book_id: 1
+  subscriber_id: 1
