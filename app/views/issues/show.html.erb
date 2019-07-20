@@ -4,13 +4,13 @@
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:date_of_issue) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name('Дата выдачи') %>:</strong></dt>
   <dd><%= @issue.date_of_issue %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:date_of_return) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name('Дата возврата') %>:</strong></dt>
   <dd><%= @issue.date_of_return %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:book_id) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name('Книга') %>:</strong></dt>
   <dd><%= @issue.book_id %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:subscriber_id) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name('Абонент') %>:</strong></dt>
   <dd><%= @issue.subscriber_id %></dd>
 </dl>
 

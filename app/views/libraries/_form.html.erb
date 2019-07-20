@@ -16,21 +16,21 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :lib_num, :class => 'control-label col-lg-2' %>
+    <%= f.label 'Номер', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :lib_num, :class => 'form-control' %>
     </div>
     <%=f.error_span(:lib_num) %>
   </div>
   <div class="form-group">
-    <%= f.label :lib_name, :class => 'control-label col-lg-2' %>
+    <%= f.label 'Наименование', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :lib_name, :class => 'form-control' %>
     </div>
     <%=f.error_span(:lib_name) %>
   </div>
   <div class="form-group">
-    <%= f.label :lib_address, :class => 'control-label col-lg-2' %>
+    <%= f.label 'Адрес', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :lib_address, :class => 'form-control' %>
     </div>
