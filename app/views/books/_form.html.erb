@@ -46,28 +46,28 @@
   <div class="form-group">
     <%= f.label 'Год издания', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :book_public_year, :class => 'form-control' %>
+      <%= f.number_field :book_public_year, :class => 'form-control' %>
     </div>
     <%=f.error_span(:book_public_year) %>
   </div>
   <div class="form-group">
     <%= f.label 'Цена', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :book_price, :class => 'form-control' %>
+      <%= f.number_field :book_price, in: 0.01..9999.99, :class => 'form-control' %>
     </div>
     <%=f.error_span(:book_price) %>
   </div>
   <div class="form-group">
     <%= f.label 'Дата поступления', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :book_receipt_date, :class => 'form-control' %>
+      <%= f.date_field :book_receipt_date, :class => 'form-control' %>
     </div>
     <%=f.error_span(:book_receipt_date) %>
   </div>
   <div class="form-group">
     <%= f.label 'Библиотека', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :library_id, :class => 'form-control' %>
+      <%= f.collection_select(:library_id, Library.all, :id, :lib_name, {include_blank: true}, :class => 'form-control') %>
     </div>
     <%=f.error_span(:library_id) %>
   </div>

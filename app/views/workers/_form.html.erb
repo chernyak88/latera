@@ -39,14 +39,14 @@
   <div class="form-group">
     <%= f.label 'Дата рождения', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :worker_birth_date, :class => 'form-control' %>
+      <%= f.date_field :worker_birth_date, :class => 'form-control' %>
     </div>
     <%=f.error_span(:worker_birth_date) %>
   </div>
   <div class="form-group">
     <%= f.label 'Дата принятия на работу', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :worker_employment_date, :class => 'form-control' %>
+      <%= f.date_field :worker_employment_date, :class => 'form-control' %>
     </div>
     <%=f.error_span(:worker_employment_date) %>
   </div>
@@ -67,7 +67,7 @@
   <div class="form-group">
     <%= f.label 'Библиотека', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :library_id, :class => 'form-control' %>
+      <%= f.collection_select(:library_id, Library.all, :id, :lib_name, {include_blank: true}, :class => 'form-control') %>
     </div>
     <%=f.error_span(:library_id) %>
   </div>

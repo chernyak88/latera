@@ -18,7 +18,7 @@
   <div class="form-group">
     <%= f.label 'Номер билета', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :sub_ticket, :class => 'form-control' %>
+      <%= f.number_field :sub_ticket, :class => 'form-control' %>
     </div>
     <%=f.error_span(:sub_ticket) %>
   </div>
@@ -53,14 +53,14 @@
   <div class="form-group">
     <%= f.label 'Телефон', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :sub_phone, :class => 'form-control' %>
+      <%= f.telephone_field :sub_phone, :class => 'form-control' %>
     </div>
     <%=f.error_span(:sub_phone) %>
   </div>
   <div class="form-group">
     <%= f.label 'Библиотека', :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :library_id, :class => 'form-control' %>
+      <%= f.collection_select(:library_id, Library.all, :id, :lib_name, {include_blank: true}, :class => 'form-control') %>
     </div>
     <%=f.error_span(:library_id) %>
   </div>
