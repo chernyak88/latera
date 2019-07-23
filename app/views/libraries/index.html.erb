@@ -9,7 +9,6 @@
       <th>Номер</th>
       <th>Наименование</th>
       <th>Адрес</th>
-      <th>Дата добавления</th>
       <th>Действия</th>
     </tr>
   </thead>
@@ -20,7 +19,6 @@
         <td><%= library.lib_num %></td>
         <td><%= library.lib_name %></td>
         <td><%= library.lib_address %></td>
-        <td><%=l library.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       library_path(library), :class => 'btn btn-default btn-xs' %>

@@ -13,8 +13,7 @@
       <th>Год издания</th>
       <th>Цена</th>
       <th>Дата поступления</th>
-      <th>Библиотека</th>
-      <th>Дата добавления</th>
+      <th>Библиотека (id)</th>
       <th>Действия</th>
     </tr>
   </thead>
@@ -30,7 +29,6 @@
         <td><%= book.book_price %></td>
         <td><%= book.book_receipt_date %></td>
         <td><%= book.library_id %></td>
-        <td><%=l book.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       book_path(book), :class => 'btn btn-default btn-xs' %>

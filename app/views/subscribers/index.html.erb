@@ -12,8 +12,7 @@
       <th>Отчество</th>
       <th>Адрес</th>
       <th>Телефон</th>
-      <th>Библиотека</th>
-      <th>Дата добавления</th>
+      <th>Библиотека (id)</th>
       <th>Действия</th>
     </tr>
   </thead>
@@ -28,7 +27,6 @@
         <td><%= subscriber.sub_address %></td>
         <td><%= subscriber.sub_phone %></td>
         <td><%= subscriber.library_id %></td>
-        <td><%=l subscriber.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       subscriber_path(subscriber), :class => 'btn btn-default btn-xs' %>
