@@ -14,7 +14,6 @@
       <th>Должность</th>
       <th>Образование</th>
       <th>Библиотека</th>
-      <th>Дата добавления</th>
       <th>Действия</th>
     </tr>
   </thead>
@@ -30,7 +29,6 @@
         <td><%= worker.worker_position %></td>
         <td><%= worker.worker_education %></td>
         <td><%= worker.library_id %></td>
-        <td><%=l worker.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
                       worker_path(worker), :class => 'btn btn-default btn-xs' %>
